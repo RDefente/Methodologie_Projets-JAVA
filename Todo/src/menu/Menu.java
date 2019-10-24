@@ -5,6 +5,9 @@ import task.Task;
 
 import java.util.Scanner;
 
+/**
+ * class used for providing menu-like exploration in the console
+ */
 public class Menu {
     private Scanner sc;
 
@@ -12,6 +15,10 @@ public class Menu {
         this.sc = new Scanner(System.in);
     }
 
+    /**
+     * the main menu, provides the user all of the possible choices when at the root of the project
+     * @param list : the list of tasks being used by the user
+     */
     public void listChoiceMenu(List list){
         String option;
 
@@ -70,9 +77,12 @@ public class Menu {
         }
     }
 
-    public void taskModifMenu(Task task, List list){
+    /**
+     * secondary menu, used for letting the user modify one of the tasks in the list
+     * @param task : the task to modify
+     */
+    public void taskModifMenu(Task task){
         String change, option;
-        Task newVersion;
 
         System.out.println("What do you want to change : name/description");
         option = sc.nextLine();
